@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anis & Kaori | Nuestra Boda</title>
+    <meta name="description" content="Te invitamos a celebrar nuestra boda. Anis & Kaori - 28 de noviembre de 2026">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #faf7f2;
+            --cream-dark: #f2ece3;
+            --green: #5f7159;
+            --green-dark: #43513f;
+            --gold: #b69768;
+            --text: #4b4945;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 40px 20px;
+            background:
+                linear-gradient(
+                    rgba(250, 247, 242, 0.88),
+                    rgba(250, 247, 242, 0.96)
+                );
+        }
+
+        .hero-content {
+            max-width: 700px;
+            animation: fadeUp 1.3s ease;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 12px;
+            color: var(--green);
+            margin-bottom: 30px;
+        }
+
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(65px, 15vw, 115px);
+            font-weight: 400;
+            color: var(--green-dark);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .date {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 27px;
+            letter-spacing: 5px;
+            color: var(--gold);
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            width: 70px;
+            height: 1px;
+            background: var(--gold);
+            margin: 30px auto;
+        }
+
+        .verse {
+            max-width: 520px;
+            margin: auto;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 23px;
+            color: #65615b;
+        }
+
+        .verse-reference {
+            margin-top: 12px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* ---------- GENERAL ---------- */
+
+        section {
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 500;
+            color: var(--green-dark);
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            color: var(--gold);
+            margin-bottom: 50px;
+        }
+
+        /* ---------- EVENTS ---------- */
+
+        .events {
+            background: var(--white);
+        }
+
+        .event-container {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        .event-card {
+            padding: 50px 30px;
+            border: 1px solid #e7dfd3;
+            position: relative;
+            transition: all .3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,.06);
+        }
+
+        .event-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .event-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: var(--green-dark);
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .event-time {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .event-place {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 28px;
+            border: 1px solid var(--green);
+            color: var(--green);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 10px;
+            transition: .3s ease;
+        }
+
+        .button:hover {
+            background: var(--green);
+            color: white;
+        }
+
+        /* ---------- DRESS ---------- */
+
+        .dress {
+            background: var(--cream-dark);
+        }
+
+        .dress-icon {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .dress-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            color: var(--green-dark);
+        }
+
+        /* ---------- COUNTDOWN ---------- */
+
+        .countdown-section {
+            background: var(--green-dark);
+            color: white;
+        }
+
+        .countdown-section .section-title {
+            color: white;
+        }
+
+        .countdown-section .section-subtitle {
+            color: #d8c5a4;
+        }
+
+        .countdown {
+            max-width: 700px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .count-item {
+            min-width: 80px;
+        }
+
+        .count-number {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 50px;
+            color: white;
+        }
+
+        .count-label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #d8c5a4;
+        }
+
+        /* ---------- RSVP ---------- */
+
+        .rsvp {
+            background: white;
+        }
+
+        .rsvp p {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
+        }
+
+        .rsvp .button {
+            background: var(--green);
+            color: white;
+            padding: 16px 35px;
+        }
+
+        .rsvp .button:hover {
+            background: var(--green-dark);
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background: var(--cream);
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .footer-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            color: var(--green-dark);
+        }
+
+        .footer-date {
+            margin-top: 10px;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: var(--gold);
+        }
+
+        /* ---------- ANIMATION ---------- */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 700px) {
+
+            section {
+                padding: 70px 18px;
+            }
+
+            .hero {
+                min-height: 95vh;
+            }
+
+            .names {
+                font-size: 70px;
+            }
+
+            .date {
+                font-size: 19px;
+                letter-spacing: 3px;
+            }
+
+            .verse {
+                font-size: 20px;
+            }
+
+            .event-container {
+                grid-template-columns: 1fr;
+            }
+
+            .countdown {
+                gap: 15px;
+            }
+
+            .count-item {
+                min-width: 60px;
+            }
+
+            .count-number {
+                font-size: 38px;
+            }
+
+            .count-label {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+    <div class="hero-content">
+
+        <div class="small-title">Nos casamos</div>
+
+        <h1 class="names">Anis & Kaori</h1>
+
+        <div class="date">28 · 11 · 2026</div>
+
+        <div class="divider"></div>
+
+        <p class="verse">
+            “De modo que ya no son dos, sino una sola carne.”
+        </p>
+
+        <p class="verse-reference">
+            Mateo 19:6
+        </p>
+
+    </div>
+</header>
+
+
+<!-- ================= CEREMONIAS ================= -->
+
+<section class="events">
+
+    <h2 class="section-title">Celebra con nosotros</h2>
+    <p class="section-subtitle">Nuestro gran día</p>
+
+    <div class="event-container">
+
+        <!-- IGLESIA -->
+
+        <div class="event-card">
+
+            <div class="event-icon">⛪</div>
+
+            <h3>Ceremonia Religiosa</h3>
+
+            <div class="event-time">
+                2:30 PM
+            </div>
+
+            <p class="event-place">
+                Iglesia de Morales<br>
+                Morales · San Martín
+            </p>
+
+            <!-- Cambiar luego por Google Maps -->
+            <a href="#"
+               class="button">
+                Ver ubicación
+            </a>
+
+        </div>
+
+
+        <!-- RECEPCION -->
+
+        <div class="event-card">
+
+            <div class="event-icon">🥂</div>
+
+            <h3>Ceremonia Civil & Recepción</h3>
+
+            <div class="event-time">
+                5:00 PM
+            </div>
+
+            <p class="event-place">
+                La Prechuchura<br>
+                Morales · San Martín
+            </p>
+
+            <!-- Cambiar luego por Google Maps -->
+            <a href="#"
+               class="button">
+                Ver ubicación
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VESTIMENTA ================= -->
+
+<section class="dress">
+
+    <div class="dress-icon">✦</div>
+
+    <h2 class="section-title">Código de Vestimenta</h2>
+
+    <p class="dress-text">
+        Formal
+    </p>
+
+</section>
+
+
+<!-- ================= COUNTDOWN ================= -->
+
+<section class="countdown-section">
+
+    <h2 class="section-title">Falta poco...</h2>
+    <p class="section-subtitle">Para nuestro gran día</p>
+
+    <div class="countdown">
+
+        <div class="count-item">
+            <span id="days" class="count-number">00</span>
+            <span class="count-label">Días</span>
+        </div>
+
+        <div class="count-item">
+            <span id="hours" class="count-number">00</span>
+            <span class="count-label">Horas</span>
+        </div>
+
+        <div class="count-item">
+            <span id="minutes" class="count-number">00</span>
+            <span class="count-label">Min</span>
+        </div>
+
+        <div class="count-item">
+            <span id="seconds" class="count-number">00</span>
+            <span class="count-label">Seg</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RSVP ================= -->
+
+<section class="rsvp">
+
+    <h2 class="section-title">¿Nos acompañas?</h2>
+
+    <p class="section-subtitle">
+        Confirma tu asistencia
+    </p>
+
+    <p>
+        Será una alegría compartir este momento tan especial contigo.
+        Por favor, confirma tu asistencia.
+    </p>
+
+    <!-- Luego podemos conectar WhatsApp o Google Forms -->
+    <a href="#"
+       class="button">
+        Confirmar asistencia
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-names">
+        Anis & Kaori
+    </div>
+
+    <div class="footer-date">
+        28 · 11 · 2026
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    // Fecha de la boda:
+    // 28 de noviembre de 2026 - 2:30 PM
+    // Hora Perú
+
+    const weddingDate = new Date("2026-11-28T14:30:00-05:00").getTime();
+
+    function updateCountdown() {
+
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance <= 0) {
+
+            document.getElementById("days").innerText = "00";
+            document.getElementById("hours").innerText = "00";
+            document.getElementById("minutes").innerText = "00";
+            document.getElementById("seconds").innerText = "00";
+
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (distance % (1000 * 60))
+            / 1000
+        );
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText =
+            String(hours).padStart(2, "0");
+
+        document.getElementById("minutes").innerText =
+            String(minutes).padStart(2, "0");
+
+        document.getElementById("seconds").innerText =
+            String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+</script>
+
+</body>
+</html>
